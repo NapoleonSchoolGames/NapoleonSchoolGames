@@ -939,4 +939,5 @@ $.Dispatch = function( id ) {
 
 $(function() {
   Engine.init();
+  Engine.turnLightsOff();
 });
