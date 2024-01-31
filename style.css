@@ -17,6 +17,9 @@
     height: 100%;
     margin: none;
 }
+.game-button {
+    width: 100%
+}
 #iframe-container {
     position: fixed;
     margin: none;
