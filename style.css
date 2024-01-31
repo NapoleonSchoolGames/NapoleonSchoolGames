@@ -1,0 +1,26 @@
+.title {
+    font-size: 100%;
+}
+.links {
+    font-size: 50%;
+}
+.news {
+    margin-left: auto;
+    margin-right: auto;
+}
+#iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    border: none;
+    overflow: hidden;
+  }
+  
+  #iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
