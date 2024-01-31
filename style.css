@@ -1,20 +1,30 @@
 .title {
-    font-size: 100%;
+    font-size: 300%;
 }
 .links {
-    font-size: 50%;
+    font-size: 100%;
 }
 .news {
     margin-left: auto;
     margin-right: auto;
 }
+#game-selection {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 25%;
+    border: none;
+    height: 100%;
+    margin: none;
+}
 #iframe-container {
     position: fixed;
+    margin: none;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 75%;
     height: 100%;
-    z-index: 9999;
+    z-index: 0;
     border: none;
     overflow: hidden;
   }
