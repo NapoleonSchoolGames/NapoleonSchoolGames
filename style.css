@@ -46,6 +46,3 @@
 .dark {
     background-color: darkslategrey;
 }
-#iframe::backdrop, #iframe-container::backdrop {
-    background-color: rgba(255, 255, 255, 0);
-}
