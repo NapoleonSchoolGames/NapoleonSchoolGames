@@ -31,9 +31,18 @@
     border: none;
     overflow: hidden;
   }
-  
-  #iframe {
+#iframe {
     width: 100%;
     height: 100%;
     border: none;
   }
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.middle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
