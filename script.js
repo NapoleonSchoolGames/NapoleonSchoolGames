@@ -1,9 +1,10 @@
+const iframeContainer = document.getElementById('iframe-container');
+const iframe = document.getElementById('iframe');
+const gameButtons = document.getElementById('game-selection');
 function openPage(url) {
-  const iframeContainer = document.getElementById('iframe-container');
-  const iframe = document.getElementById('iframe');
-  
   iframe.src = url;
   iframeContainer.style.display = 'block';
+  gameButtons.style.display = 'none';
   
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
@@ -14,7 +15,6 @@ function openPage(url) {
   }
 }
 
-// Close fullscreen if ESC key is pressed
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeFullscreen();
@@ -32,4 +32,5 @@ function closeFullscreen() {
   
   const iframeContainer = document.getElementById('iframe-container');
   iframeContainer.style.display = 'none';
+  gameButtons.style.display = 'block';
 }
