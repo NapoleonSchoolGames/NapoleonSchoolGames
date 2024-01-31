@@ -40,9 +40,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-.middle {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+.dark {
+    background-color: darkslategrey;
 }
