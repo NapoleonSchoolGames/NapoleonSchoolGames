@@ -538,11 +538,11 @@
       var darkCss = Engine.findStylesheet('darkenLights');
       if (darkCss == null) {
         $('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
-        $('.lightsOff').text(_('lights on.'));
+        $('.lightsOff').text(_('lights on. (broken)'));
         $SM.set('config.lightsOff', true, true);
       } else if (darkCss.disabled) {
         darkCss.disabled = false;
-        $('.lightsOff').text(_('lights on.'));
+        $('.lightsOff').text(_('lights on. (broken)'));
         $SM.set('config.lightsOff', true,true);
       } else {
         $("#darkenLights").attr("disabled", "disabled");
