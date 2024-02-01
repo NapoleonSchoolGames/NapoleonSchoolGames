@@ -1,8 +1,10 @@
 function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
+  const buttons = document.getElementById('game-selection')
   iframe.src = url;
   iframeContainer.style.display = 'block';
+  buttons.style.display = 'none';
   
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
@@ -29,5 +31,7 @@ function closeFullscreen() {
   }
   
   const iframeContainer = document.getElementById('iframe-container');
+  const buttons = document.getElementById('game-selection')
   iframeContainer.style.display = 'none';
+  buttons.style.display = 'block';
 }
