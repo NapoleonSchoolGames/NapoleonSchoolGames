@@ -39,7 +39,7 @@ function closeFullscreen() {
 */
 function fullscreenchanged(event) {
   if (document.fullscreenElement) {
-    document.exitFullscreen();
+    console.log("pp");
   } else {
     const iframeContainer = document.getElementById('iframe-container');
     const buttons = document.getElementById('game-selection')
