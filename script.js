@@ -4,8 +4,11 @@ function openPage(url) {
   const buttons = document.getElementById('game-selection')
   iframeContainer.style.display = 'block';
   buttons.style.display = 'none';
-  if (iframe.src !== url) {
-    iframe.src = url;
+  const currentSrc = new URL(iframe.src, window.location).href;
+  const targetSrc = new URL(url, window.location).href;
+  
+  if (currentSrc !== targetSrc) {
+    iframe.src = url; // Only update the src if it's different.
   }
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
