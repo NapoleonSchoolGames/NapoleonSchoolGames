@@ -21,6 +21,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+/*
 function closeFullscreen() {
   if (document.exitFullscreen) {
     document.exitFullscreen();
@@ -35,3 +36,16 @@ function closeFullscreen() {
   iframeContainer.style.display = 'none';
   buttons.style.display = 'block';
 }
+*/
+function fullscreenchanged(event) {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+    const iframeContainer = document.getElementById('iframe-container');
+    const buttons = document.getElementById('game-selection')
+    iframeContainer.style.display = 'none';
+    buttons.style.display = 'block';
+  }
+}
+
+document.addEventListener("fullscreenchange", fullscreenchanged);
