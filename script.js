@@ -6,9 +6,8 @@ function openPage(url) {
   buttons.style.display = 'none';
   const currentSrc = new URL(iframe.src, window.location).href;
   const targetSrc = new URL(url, window.location).href;
-  
   if (currentSrc !== targetSrc) {
-    iframe.src = url; // Only update the src if it's different.
+    iframe.src = url;
   }
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
