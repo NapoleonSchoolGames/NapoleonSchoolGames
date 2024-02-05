@@ -19,7 +19,7 @@ function openPage(url) {
 }
 function fullscreenchanged(event) {
   if (document.fullscreenElement) {
-    console.log("pp");
+    //
   } else {
     const buttons = document.getElementById('game-selection')
     buttons.style.display = 'block';
