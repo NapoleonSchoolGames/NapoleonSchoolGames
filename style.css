@@ -2,11 +2,13 @@
     font-size: 300%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 .links {
     font-size: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 .news {
     border-color: black;
