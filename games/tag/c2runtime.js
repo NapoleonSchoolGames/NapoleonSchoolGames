@@ -1330,14 +1330,14 @@ vec3.create = function(t) {
         }
         i.prototype.requestProjectData = function() {
             var e = this;
-            if (this.isWKWebView) this.fetchLocalFileViaCordovaAsText("./files/data.json", function(t) {
+            if (this.isWKWebView) this.fetchLocalFileViaCordovaAsText("./files/data.js", function(t) {
                 e.loadProject(JSON.parse(t))
             }, function(t) {
                 alert("Error fetching data.js")
             });
             else {
                 var i = this.isWindowsPhone8 ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest,
-                    s = "./files/data.json";
+                    s = "./files/data.js";
                 (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10) && (s = "data.json"), i.open("GET", s, !0);
                 var n = !1;
                 if (!this.isDomFree && "response" in i && "responseType" in i) try {
