@@ -75,7 +75,7 @@
                         ]
                     ]],
                     ["c_4", 5, false, 1, 0, false, 110181789149187, [
-                        [".files/playercolor-sheet2.png", 247, 0, 0, 152, 90, 1, 0.5, 0.4888888895511627, [],
+                        ["https://napoleonschoolgames.github.io/NapoleonSchoolGames/games/tag/files/playercolor-sheet2.png", 247, 0, 0, 152, 90, 1, 0.5, 0.4888888895511627, [],
                             [-0.4736841917037964, -0.4454105794429779, 0, -0.4888888895511627, 0.4736840128898621, -0.4454105794429779, 0.5, 0.01111111044883728, 0.4736840128898621, 0.4676330983638763, 0, 0.5111111402511597, -0.4736841917037964, 0.4676330983638763, -0.5, 0.01111111044883728], 0
                         ]
                     ]]
@@ -238,7 +238,7 @@
             ],
             ["t20", 11, false, [], 0, 0, null, [
                     ["Default", 5, false, 1, 0, false, 388968198327647, [
-                        [".files/playery-sheet0.png", 178, 0, 0, 32, 32, 1, 0.5, 0.5, [],
+                        ["https://napoleonschoolgames.github.io/NapoleonSchoolGames/games/tag/files/playery-sheet0.png", 178, 0, 0, 32, 32, 1, 0.5, 0.5, [],
                             [], 0
                         ]
                     ]]
@@ -262,7 +262,7 @@
                         ]
                     ]],
                     ["Anim", 1, false, 1, 0, false, 561709889376372, [
-                        [".files/taggerind-sheet1.png", 236, 1, 1, 24, 44, 1, 0.5, 1.590909123420715, [],
+                        ["https://napoleonschoolgames.github.io/NapoleonSchoolGames/games/tag/files/taggerind-sheet1.png", 236, 1, 1, 24, 44, 1, 0.5, 1.590909123420715, [],
                             [-0.5, -1.545454621315002, 0.5, -1.545454621315002, 0.5, -1.227273106575012, -0.5, -1.227273106575012], 3
                         ],
                         ["https://napoleonschoolgames.github.io/NapoleonSchoolGames/games/tag/files/taggerind-sheet1.png", 236, 27, 1, 24, 44, 1, 0.5, 1.590909123420715, [],
