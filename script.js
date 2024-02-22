@@ -31,9 +31,6 @@ document.addEventListener("fullscreenchange", fullscreenchanged);
 
 window.onload = function() {
   var gameButtons = document.getElementsByClassName("game-button");
-  for (var i = 0; i < gameButtons.length; i++) {
-      gameButtons[i].name = gameButtons[i].src.split('/')[2].split('.')[0].toLowerCase();
-  }
 }
 
 function searchGames() {
@@ -43,7 +40,7 @@ function searchGames() {
   gameButtons = document.getElementsByClassName("game-button");
 
   for (i = 0; i < gameButtons.length; i++) {
-      if (gameButtons[i].name.indexOf(filter) > -1) {
+      if (gameButtons[i].src.indexOf(filter) > -1) {
           gameButtons[i].style.display = '';
       } else {
           gameButtons[i].style.display = 'none';
