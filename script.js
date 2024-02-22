@@ -28,22 +28,25 @@ function fullscreenchanged(event) {
 
 document.addEventListener("fullscreenchange", fullscreenchanged);
 
-document.getElementById("search-input").addEventListener("input", searchGames);
+
+window.onload = function() {
+  var gameButtons = document.getElementsByClassName("game-button");
+  for (var i = 0; i < gameButtons.length; i++) {
+      gameButtons[i].getAttribute('name', gameButtons[i].src.split('/')[2].split('.')[0].replace(/([A-Z])/g, ' $1').trim().toLowerCase());
+  }
+}
 
 function searchGames() {
-  const searchValue = document.getElementById("search-input").value.toLowerCase();
-  const gameButtons = document.querySelectorAll(".game-button");
+  var input, filter, gameButtons, i;
+  input = document.getElementById('search-bar');
+  filter = input.value.toLowerCase();
+  gameButtons = document.getElementsByClassName("game-button");
 
-  gameButtons.forEach((button) => {
-    button.style.display = "none";
-  });
-
-  gameButtons.forEach((button) => {
-    const imgSrc = button.getAttribute("src");
-    const fileName = imgSrc.split("/").pop().toLowerCase();
-
-    if (fileName.includes(searchValue)) {
-      button.style.display = "block";
-    }
-  });
+  for (i = 0; i < gameButtons.length; i++) {
+      if (gameButtons[i].name.indexOf(filter) > -1) {
+          gameButtons[i].style.display = '';
+      } else {
+          gameButtons[i].style.display = 'none';
+      }
+  }
 }
