@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en-us"><head>
+    <link href="style.css" rel="stylesheet">
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Time Shooter SWAT</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-	<script src="/adinLoader.js"></script>
-  </head>
-  <body class="dark">
-    <div id="unity-container" class="unity-desktop">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <title>Time Shooter 3 SWAT</title>
+    
+  </head><body class="dark" dir="ltr">
+    <div class="unity-desktop" id="unity-container">
       <canvas id="unity-canvas"></canvas>
     </div>
     <div id="loading-cover" style="display:none;">
@@ -25,12 +22,11 @@
     <div id="unity-fullscreen-button" style="display: none;"></div>
     <script>
       const hideFullScreenButton = "1";
-      const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/UnityLoader.js";
+      const loaderUrl = "ts3.loader.js";
       const config = {
-        dataUrl: buildUrl + "/TimeShooter3_GD.data.unityweb",
-        frameworkUrl: buildUrl + "/TimeShooter3_GD.framework.js.unityweb",
-        codeUrl: buildUrl + "/TimeShooter3_GD.wasm.unityweb",
+        dataUrl: "ts3.data",
+        frameworkUrl: "ts3.framework.js",
+        codeUrl: "ts3.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "GoGoMan",
         productName: "Time Shooter SWAT",
@@ -64,7 +60,7 @@
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
       }
-      canvas.style.background = "url('" + buildUrl + "/TimeShooter3_GD.jpg') center / cover";
+      canvas.style.background = "url('ts3.jpg') center / cover";
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
@@ -89,6 +85,4 @@
         });
       };
       document.body.appendChild(script);
-    </script>
-  </body>
-</html>
+    </script>  </body></html>
