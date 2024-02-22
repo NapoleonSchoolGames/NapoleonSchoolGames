@@ -32,7 +32,7 @@ document.addEventListener("fullscreenchange", fullscreenchanged);
 window.onload = function() {
   var gameButtons = document.getElementsByClassName("game-button");
   for (var i = 0; i < gameButtons.length; i++) {
-      gameButtons[i].name = gameButtons[i].src.split('/')[2].split('.')[0].replace(/([A-Z])/g, ' $1').trim().toLowerCase();
+      gameButtons[i].name = gameButtons[i].src.split('/')[2].split('.')[0].toLowerCase();
   }
 }
 
