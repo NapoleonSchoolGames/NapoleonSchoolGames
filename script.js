@@ -27,3 +27,23 @@ function fullscreenchanged(event) {
 }
 
 document.addEventListener("fullscreenchange", fullscreenchanged);
+
+document.getElementById("search-input").addEventListener("input", searchGames);
+
+function searchGames() {
+  const searchValue = document.getElementById("search-input").value.toLowerCase();
+  const gameButtons = document.querySelectorAll("#game-selection .game-button");
+
+  gameButtons.forEach((button) => {
+    button.style.display = "none";
+  });
+
+  gameButtons.forEach((button) => {
+    const imgSrc = button.getAttribute("src");
+    const fileName = imgSrc.split("/").pop().toLowerCase();
+
+    if (fileName.includes(searchValue)) {
+      button.style.display = "block";
+    }
+  });
+}
