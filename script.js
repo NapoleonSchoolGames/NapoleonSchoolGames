@@ -36,7 +36,7 @@ window.onload = function() {
 function searchGames() {
   var input, filter, gameButtons, i;
   input = document.getElementById('search-bar');
-  filter = input.value.toLowerCase();
+  filter = input.value.toLowerCase().replace(/\s+/g, '');
   gameButtons = document.getElementsByClassName("game-button");
 
   for (i = 0; i < gameButtons.length; i++) {
