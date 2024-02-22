@@ -32,7 +32,7 @@ document.getElementById("search-input").addEventListener("input", searchGames);
 
 function searchGames() {
   const searchValue = document.getElementById("search-input").value.toLowerCase();
-  const gameButtons = document.querySelectorAll("#game-selection .game-button");
+  const gameButtons = document.querySelectorAll(".game-button");
 
   gameButtons.forEach((button) => {
     button.style.display = "none";
