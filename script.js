@@ -1,7 +1,7 @@
+const iframeContainer = document.getElementById('iframe-container');
+const iframe = document.getElementById('iframe');
+const buttons = document.getElementById('game-selection')
 function openPage(url) {
-  const iframeContainer = document.getElementById('iframe-container');
-  const iframe = document.getElementById('iframe');
-  const buttons = document.getElementById('game-selection')
   iframeContainer.style.display = 'block';
   buttons.style.display = 'none';
   const currentSrc = new URL(iframe.src, window.location).href;
@@ -17,22 +17,27 @@ function openPage(url) {
     iframe.msRequestFullscreen(); // IE11
   }
 }
+function openSWF(swf) {
+  openPage('./flash.html?swf='+swf)
+}
 function fullscreenchanged(event) {
   if (document.fullscreenElement) {
-    //
   } else {
-    const buttons = document.getElementById('game-selection')
     buttons.style.display = 'block';
   }
 }
-
 document.addEventListener("fullscreenchange", fullscreenchanged);
+var swfobject = {};
+swfobject.embedSWF = function(url, cont, width, height){
+    var ruffle = window.RufflePlayer.newest(),
+        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+            width: width,
+            height: height,
+            style: 'width: ' + width + 'px; height: ' + height + 'px',
+        });
 
-
-window.onload = function() {
-  var gameButtons = document.getElementsByClassName("game-button");
+    player.load({ url: url });
 }
-
 function searchGames() {
   var input, filter, gameButtons, i;
   input = document.getElementById('search-bar');
