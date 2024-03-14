@@ -18,7 +18,7 @@ function openPage(url) {
   }
 }
 function openSWF(swf) {
-  openPage('./flash.html?swf=' + encodeURIComponent(swf));
+  openPage('./flash.html?swf=${swf}');
 }
 function fullscreenchanged(event) {
   const iframeContainer = document.getElementById('iframe-container');
