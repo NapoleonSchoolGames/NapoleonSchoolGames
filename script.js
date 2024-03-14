@@ -1,7 +1,7 @@
-const iframeContainer = document.getElementById('iframe-container');
-const iframe = document.getElementById('iframe');
-const buttons = document.getElementById('game-selection')
 function openPage(url) {
+  const iframeContainer = document.getElementById('iframe-container');
+  const iframe = document.getElementById('iframe');
+  const buttons = document.getElementById('game-selection')
   iframeContainer.style.display = 'block';
   buttons.style.display = 'none';
   const currentSrc = new URL(iframe.src, window.location).href;
@@ -39,6 +39,9 @@ swfobject.embedSWF = function(url, cont, width, height){
     player.load({ url: url });
 }
 function searchGames() {
+  const iframeContainer = document.getElementById('iframe-container');
+  const iframe = document.getElementById('iframe');
+  const buttons = document.getElementById('game-selection') 
   var input, filter, gameButtons, i;
   input = document.getElementById('search-bar');
   filter = input.value.toLowerCase().replace(/\s+/g, '');
