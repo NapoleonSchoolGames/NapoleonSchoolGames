@@ -31,15 +31,17 @@
 <div id='ruffle' class="gameloc"></div>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 <script>
-const currentUrl = window.location.href;
-const swfIndex = currentUrl.indexOf('?swf=');
+  window.addEventListener("DOMContentLoaded", (event) => {
+      let ruffle = window.RufflePlayer.newest();
+      let player = ruffle.createPlayer();
+      document.getElementById("ruffle").appendChild(player);
 
-if (swfIndex !== -1) {
-  const swfValue = currentUrl.substring(swfIndex + 5);
-  const nextParamIndex = swfValue.indexOf('&');
-  const swf = (nextParamIndex !== -1) ? swfValue.substring(0, nextParamIndex) : swfValue;
-}
-swfobject.embedSWF("./flashfiles/"+swf, 'ruffle', window.innerWidth, window.innerHeight);
+      const params = new URLSearchParams(window.location.search);
+      const swfUrl = params.get('swf');
+      if (swfUrl) {
+          player.load("./flashfiles/" + swfUrl);
+      }
+  });
 </script>
 <!--<script id = "gabe">swfobject.embedSWF("./flashfiles/Super Smash Flash.swf", 'ruffle', window.innerWidth, window.innerHeight);</script>-->
 </body>

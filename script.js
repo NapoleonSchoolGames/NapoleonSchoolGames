@@ -18,9 +18,12 @@ function openPage(url) {
   }
 }
 function openSWF(swf) {
-  openPage('./flash.html?swf='+swf)
+  openPage('./flash.html?swf=' + encodeURIComponent(swf));
 }
 function fullscreenchanged(event) {
+  const iframeContainer = document.getElementById('iframe-container');
+  const iframe = document.getElementById('iframe');
+  const buttons = document.getElementById('game-selection') 
   if (document.fullscreenElement) {
   } else {
     buttons.style.display = 'block';
