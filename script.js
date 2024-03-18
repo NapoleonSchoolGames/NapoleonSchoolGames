@@ -29,6 +29,20 @@ function fullscreenchanged(event) {
     buttons.style.display = 'block';
   }
 }
+function searchGames() {
+  var input, filter, gameButtons, i;
+  input = document.getElementById('search-bar');
+  filter = input.value.toLowerCase().replace(/\s+/g, '');
+  gameButtons = document.getElementsByClassName("game-button");
+
+  for (i = 0; i < gameButtons.length; i++) {
+      if (gameButtons[i].src.indexOf(filter) > -1) {
+          gameButtons[i].style.display = '';
+      } else {
+          gameButtons[i].style.display = 'none';
+      }
+  }
+}
 document.addEventListener("fullscreenchange", fullscreenchanged);
 /*
 window.onload = function() {
