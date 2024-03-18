@@ -11,14 +11,6 @@
 	<title>Pixelsuft hl</title>
 	<script>
 		document.addEventListener('contextmenu', event => event.preventDefault());
-		window.onbeforeunload = function(e) {
-			// Cancel the event
-			e.preventDefault();
-
-			// Chrome requires returnValue to be set
-			e.returnValue = 'Really want to quit the game?';
-		};
-
 		//Prevent Ctrl+S (and Ctrl+W for old browsers and Edge)
 		document.onkeydown = function(e) {
 			e = e || window.event; //Get event
@@ -706,7 +698,7 @@
 		Module.websocket = [];
 		//Module.websocket.url = 'wsproxy://the-swank.pp.ua:3000/'
 		//Module.websocket.url = 'wsproxy://4.tcp.ngrok.io:10657/';
-		Module.websocket.url = 'wss://relay.widgetry.org';
+		//Module.websocket.url = 'wss://relay.widgetry.org';
 		ENV = [];
 	</script>
 
