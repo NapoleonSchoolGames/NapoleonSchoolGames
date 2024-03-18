@@ -44,6 +44,7 @@ function searchGames() {
   }
 }
 document.addEventListener("fullscreenchange", fullscreenchanged);
+
 /*
 window.onload = function() {
     if(window.location.hostname !== '*napoleonschoolgames.github.io/NapoleonSchoolGames/*') {
