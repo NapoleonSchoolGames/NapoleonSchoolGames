@@ -63,10 +63,10 @@ function createNewsElement(title, content) {
   element.classList.add('news');
   const titleElement = document.createElement('h2');
   titleElement.textContent = title;
-  titleElement.classList.add('news');
+  titleElement.classList.add('');
   const contentElement = document.createElement('p');
   contentElement.textContent = content;
-  contentElement.classList.add('news');
+  contentElement.classList.add('');
   element.appendChild(titleElement);
   element.appendChild(contentElement);
   return element;
