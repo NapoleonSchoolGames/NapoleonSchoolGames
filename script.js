@@ -49,12 +49,13 @@ async function fetchNews() {
   return newsData;
 }
 async function generateNews(newsData) {
+  const newsData = await fetchNews();
   const newsContainer = document.getElementById('news-container');
   newsContainer.innerHTML = '';
 
   newsData.forEach(news => {
       const newsElement = createNewsElement(news.title, news.content);
-      newsContainer.appendChild(newsElement);
+      newsContainer.appendChild(element);
   });
 }
 function createNewsElement(title, content) {
@@ -72,5 +73,4 @@ function createNewsElement(title, content) {
 }
 
 document.addEventListener("fullscreenchange", fullscreenchanged);
-const newsData = await fetchNews();
 generateNews(newsData);
