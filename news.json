@@ -1,5 +1,9 @@
 [
     {
+        "title": "Games minified",
+        "content": "I minified the code for HTML5 games, meaning faster load times. please report any errors in the discord"
+    },
+    {
         "title": "Few new updates",
         "content": "I redid the news system, removed shitty anylitics (you children probalbly dont know what this means), and I fixed duck life (hopefully)"
     },
