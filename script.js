@@ -45,10 +45,22 @@ function searchGames() {
 }
 document.addEventListener("fullscreenchange", fullscreenchanged);
 
-/*
-window.onload = function() {
-    if(window.location.hostname !== '*napoleonschoolgames.github.io/NapoleonSchoolGames/*') {
-        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    }
+async function fetchNews() {
+  const response = await fetch('news.json');
+  const newsData = await response.json();
+  return newsData;
 }
-*/
+async function generateNews(newsData) {
+  const newsContainer = document.getElementById('news-container');
+  newsContainer.innerHTML = '';
+
+  newsData.forEach(news => {
+      const newsElement = createNewsElement(news.title, news.content);
+      newsContainer.appendChild(newsElement);
+  });
+}
+async function init() {
+  const newsData = await fetchNews();
+  generateNews(newsData);
+}
+init()
