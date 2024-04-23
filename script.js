@@ -43,8 +43,6 @@ function searchGames() {
       }
   }
 }
-document.addEventListener("fullscreenchange", fullscreenchanged);
-
 async function fetchNews() {
   const response = await fetch('news.json');
   const newsData = await response.json();
@@ -59,8 +57,20 @@ async function generateNews(newsData) {
       newsContainer.appendChild(newsElement);
   });
 }
-async function init() {
-  const newsData = await fetchNews();
-  generateNews(newsData);
+function createNewsElement(title, content) {
+  const element = document.createElement('div');
+  element.classList.add('news');
+  const titleElement = document.createElement('h2');
+  titleElement.textContent = title;
+  titleElement.classList.add('news');
+  const contentElement = document.createElement('p');
+  contentElement.textContent = content;
+  contentElement.classList.add('news');
+  element.appendChild(titleElement);
+  element.appendChild(contentElement);
+  return element;
 }
-init()
+
+document.addEventListener("fullscreenchange", fullscreenchanged);
+const newsData = await fetchNews();
+generateNews(newsData);
