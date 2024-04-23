@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta Http-Equiv="Cache" content="no-cache">
-  <meta Http-Equiv="Pragma-Control" content="no-cache">
-  <meta Http-Equiv="Cache-directive" Content="no-cache">
-  <meta Http-Equiv="Pragma-directive" Content="no-cache">
-  <meta Http-Equiv="Cache-Control" Content="no-cache">
-  <meta Http-Equiv="Pragma" Content="no-cache">
-  <meta Http-Equiv="Expires" Content="0">
-  <meta Http-Equiv="Pragma-directive: no-cache">
-  <meta Http-Equiv="Cache-directive: no-cache">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Ruffle Example">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="language" content="English">
-  <title>Loading</title>
-  <style>
-    * {
-      margin: 0;
-      overflow-y: hidden;
-    }
-  </style>
-  <script src="script.js"></script>
-  <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
-    supports it.</noscript>
-</head>
-<body>
-<div id='ruffle' class="gameloc"></div>
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-<script>
-  window.addEventListener("DOMContentLoaded", (event) => {
-      let ruffle = window.RufflePlayer.newest();
-      let player = ruffle.createPlayer();
-      document.getElementById("ruffle").appendChild(player);
-      player.style.width = "100vw"; 
-      player.style.height = "100vh";
-      const params = new URLSearchParams(window.location.search);
-      const swfUrl = params.get('swf');
-      if (swfUrl) {
-          player.load("./flashfiles/" + swfUrl);
-      }
-  });
-</script>
-<!--<script id = "gabe">swfobject.embedSWF("./flashfiles/Super Smash Flash.swf", 'ruffle', window.innerWidth, window.innerHeight);</script>-->
-</body>
+    <head>
+        <meta Http-Equiv="Cache" content="no-cache">
+        <meta Http-Equiv="Pragma-Control" content="no-cache">
+        <meta Http-Equiv="Cache-directive" Content="no-cache">
+        <meta Http-Equiv="Pragma-directive" Content="no-cache">
+        <meta Http-Equiv="Cache-Control" Content="no-cache">
+        <meta Http-Equiv="Pragma" Content="no-cache">
+        <meta Http-Equiv="Expires" Content="0">
+        <meta Http-Equiv="Pragma-directive: no-cache">
+        <meta Http-Equiv="Cache-directive: no-cache">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Ruffle Example">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <title>Loading</title>
+        <style>* {margin: 0;overflow-y: hidden;}</style>
+        <script src="script.js"></script>
+        <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that supports it.</noscript>
+    </head>
+    <body>
+        <div id='ruffle' class="gameloc"></div>
+        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+        <script>
+            window.addEventListener("DOMContentLoaded", (event) => {
+                let ruffle = window.RufflePlayer.newest();
+                let player = ruffle.createPlayer();
+                document.getElementById("ruffle").appendChild(player);
+                player.style.width = "100vw"; 
+                player.style.height = "100vh";
+                const params = new URLSearchParams(window.location.search);
+                const swfUrl = params.get('swf');
+                if (swfUrl) {
+                    player.load("./flashfiles/" + swfUrl);
+                }
+            });
+        </script>
+    </body>
 </html>
