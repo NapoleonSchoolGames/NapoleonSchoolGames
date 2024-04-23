@@ -2,19 +2,21 @@ function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
   const buttons = document.getElementById('game-selection')
-  iframeContainer.style.display = 'block';
+  //Hide buttons on call
   buttons.style.display = 'none';
   const currentSrc = new URL(iframe.src, window.location).href;
   const targetSrc = new URL(url, window.location).href;
+  //Set iframe
   if (currentSrc !== targetSrc) {
     iframe.src = url;
   }
+  //fullscreen
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
   } else if (iframe.webkitRequestFullscreen) { 
-    iframe.webkitRequestFullscreen(); // Safari
+    iframe.webkitRequestFullscreen(); 
   } else if (iframe.msRequestFullscreen) { 
-    iframe.msRequestFullscreen(); // IE11
+    iframe.msRequestFullscreen();
   }
 }
 function openSWF(swf) {
@@ -24,6 +26,7 @@ function fullscreenchanged(event) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
   const buttons = document.getElementById('game-selection') 
+  //if not fullscreen, show buttons
   if (document.fullscreenElement) {
   } else {
     buttons.style.display = 'block';
@@ -34,7 +37,7 @@ function searchGames() {
   input = document.getElementById('search-bar');
   filter = input.value.toLowerCase().replace(/\s+/g, '');
   gameButtons = document.getElementsByClassName("game-button");
-
+  //check if the text matches any game's image name (triggers on keyUp)
   for (i = 0; i < gameButtons.length; i++) {
       if (gameButtons[i].src.indexOf(filter) > -1) {
           gameButtons[i].style.display = '';
@@ -52,7 +55,7 @@ async function generateNews() {
   const newsData = await fetchNews();
   const newsContainer = document.getElementById('news-container');
   newsContainer.innerHTML = '';
-
+  //for all news "Blocks" call createNewsElement with the title/content, then appends it.
   newsData.forEach(news => {
     const newsElement = createNewsElement(news.title, news.content);
     newsContainer.appendChild(newsElement);
@@ -61,16 +64,20 @@ async function generateNews() {
 function createNewsElement(title, content) {
   const element = document.createElement('div');
   element.classList.add('news');
+  //create element
   const titleElement = document.createElement('h2');
+  //add content
   titleElement.textContent = title;
-  titleElement.classList.add('');
+  //add class
+  titleElement.classList.add('news-title');
   const contentElement = document.createElement('p');
   contentElement.textContent = content;
-  contentElement.classList.add('');
+  contentElement.classList.add('news-content');
   element.appendChild(titleElement);
   element.appendChild(contentElement);
   return element;
 }
 
+//init
 document.addEventListener("fullscreenchange", fullscreenchanged);
 generateNews();
