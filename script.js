@@ -85,12 +85,19 @@ const gameSelectionDiv = document.getElementById('game-selection');
 fetch('games.json')
   .then(response => response.json())
   .then(games => {
+    console.log('Games data:', games);
     games.forEach(game => {
       const img = document.createElement('img');
-      const fileExtension = game.name.match(/\.(.+)$/)[1].toLowerCase();
       img.className = 'game-button';
+      const fileExtension = game.name.match(/\.(.+)$/);
+      if (!fileExtension) {
+        alert(`Error: No file extension found for ${game.name}`);
+        return;
+      }
+      fileExtension = fileExtension[1].toLowerCase();
       img.src = `./images/${game.name}.${fileExtension}`;
       img.onclick = game.flash ? () => openSWF(`${game.name}.swf`) : () => openPage(`./games/${game.name}/index.html`);
       gameSelectionDiv.appendChild(img);
     });
-  });
+  })
+  .catch(error => console.error('Error:', error));
