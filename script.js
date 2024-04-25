@@ -86,7 +86,7 @@ function loadGames() {
         const img = document.createElement('img');
         img.className = 'game-button';
         img.src = `./images/${game.name}.jpg`;
-        img.alt= `${game.name}`
+        img.alt = `${game.name}`;
         img.onclick = game.flash ? () => openSWF(`${game.name}.swf`) : () => openPage(`./games/${game.name}/index.html`);
         gameSelectionDiv.appendChild(img);
       });
