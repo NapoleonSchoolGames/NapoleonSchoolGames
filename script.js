@@ -87,8 +87,9 @@ fetch('games.json')
   .then(games => {
     games.forEach(game => {
       const img = document.createElement('img');
+      const fileExtension = game.name.match(/\.(.+)$/)[1].toLowerCase();
       img.className = 'game-button';
-      img.src = `./images/${game.name}`;
+      img.src = `./images/${game.name}.${fileExtension}`;
       img.onclick = game.flash ? () => openSWF(`${game.name}.swf`) : () => openPage(`./games/${game.name}/index.html`);
       gameSelectionDiv.appendChild(img);
     });
