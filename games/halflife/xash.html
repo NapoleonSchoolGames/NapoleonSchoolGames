@@ -108,7 +108,7 @@ var zipMods=[];var pkgMods=[]
 
 	<script type='text/javascript'>
 var show_again=!0;var statusElement=document.getElementById('status');var progressElement=document.getElementById('progress');var asyncDialog=document.getElementById('asyncDialog');var myerrorbuf=''
-var myerrordate=new Date();var mounted=!1;var gamedir='valve';var moduleCount=0;var mfs;var zipSize;if(!ArrayBuffer.isView){ArrayBuffer.isView=function(a){return a!==null&&typeof(a)==="object"&&a.buffer instanceof ArrayBuffer}}
+var myerrordate=new Date();var mounted=!1;var gamedir='valve';var moduleCount=0;var mem=500;var mfs;var zipSize;if(!ArrayBuffer.isView){ArrayBuffer.isView=function(a){return a!==null&&typeof(a)==="object"&&a.buffer instanceof ArrayBuffer}}
 showElement('optionsTitle',!1);function prepareSelects(){var len=zipMods.length;var select=document.getElementById('selectZip');if(len){showElement('zipHider',!0);if(len>1){var links='';for(var i=0;i<len;i++){select.options[i]=new Option(zipMods[i][1],zipMods[i][0]);links+='<br><a class="glow" onclick=location.href="'+zipMods[i][0]+'">'+zipMods[i][1]+'</a>'}
 select.style.display='block';document.getElementById('linksPlaceholder').innerHTML+=links}}else document.getElementById('rZip').checked=!1;len=pkgMods.length;select=document.getElementById('selectPkg');if(len){showElement('pkgHider',!0);if(len>1){for(var i=0;i<len;i++)
 select.options[i]=new Option(pkgMods[i][1],pkgMods[i][0]);}}else document.getElementById('rPackage').checked=!1;if(!zipMods.length&&!len){document.getElementById('rLocalZip').checked=!0;showElement('rLocalZip',!1)}}

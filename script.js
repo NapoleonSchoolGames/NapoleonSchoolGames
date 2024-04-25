@@ -81,3 +81,15 @@ function createNewsElement(title, content) {
 //init
 document.addEventListener("fullscreenchange", fullscreenchanged);
 generateNews();
+const gameSelectionDiv = document.getElementById('game-selection');
+fetch('games.json')
+  .then(response => response.json())
+  .then(games => {
+    games.forEach(game => {
+      const img = document.createElement('img');
+      img.className = 'game-button';
+      img.src = `./images/${game.name}`;
+      img.onclick = game.flash ? () => openSWF(`${game.name}.swf`) : () => openPage(`./games/${game.name}/index.html`);
+      gameSelectionDiv.appendChild(img);
+    });
+  });
