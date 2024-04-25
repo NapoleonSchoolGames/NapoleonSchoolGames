@@ -77,11 +77,7 @@ function createNewsElement(title, content) {
   element.appendChild(contentElement);
   return element;
 }
-
-//init
-document.addEventListener("fullscreenchange", fullscreenchanged);
-generateNews();
-document.addEventListener("DOMContentLoaded", function() {
+function loadGames() {
   const gameSelectionDiv = document.getElementById('game-selection');
   fetch('games.json')
     .then(response => response.json())
@@ -95,4 +91,4 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     })
     .catch(error => alert('Error fetching games:', error));
-});
+};
