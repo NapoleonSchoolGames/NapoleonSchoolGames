@@ -18,6 +18,22 @@ function openPage(url) {
   } else if (iframe.msRequestFullscreen) { 
     iframe.msRequestFullscreen();
   }
+  Swal.fire({
+    title: "Please consider donating to help me develop the site",
+    text: "If you don't want to, thats cool! Just wait 5 seconds for this to go away.",
+    icon: "question",
+    confirmButtonText: "No donate link yet!",
+    timer: 5000,
+    timerProgressBar: true,
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: false,
+    showConfirmButton: true
+  }).then((result) => {
+    if (result.value) {
+      window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+    }
+  }); 
 }
 function openSWF(swf) {
   openPage(`./flash.html?swf=${swf}`);
@@ -104,19 +120,3 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
-
-Swal.fire({
-  title: "test",
-  text: "this is a test, please wait 5 seconds to continue",
-  icon: "success",
-  timer: 5000,
-  timerProgressBar: true.value,
-  allowOutsideClick: false,
-  allowEscapeKey: false,
-  allowEnterKey: false,
-  showConfirmButton: true
-}).then((result) => {
-  if (result.value) {
-    window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
-  }
-}); 
