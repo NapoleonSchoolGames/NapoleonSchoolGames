@@ -20,7 +20,7 @@
         <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script defer src="js/script.js"></script>
         <script>
-            generateNews();
+            addEventListener("DOMContentLoaded", (event) => {generateNews();});
             document.addEventListener("fullscreenchange", fullscreenchanged);
         </script>
     </body>
