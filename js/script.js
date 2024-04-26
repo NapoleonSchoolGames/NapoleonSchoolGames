@@ -104,3 +104,10 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
+
+Swal.fire({
+  title: 'Test',
+  text: 'Ignore this',
+  icon: 'question',
+  confirmButtonText: 'sure'
+});
