@@ -1,9 +1,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="./style.css">
-        <script src="./js/jquery-3.7.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./js/script.js"></script>
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
@@ -19,12 +16,12 @@
         </div>
         <br>
         <div id="news-container"></div>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/script.js"></script>
         <script>
             generateNews();
             document.addEventListener("fullscreenchange", fullscreenchanged);
-        </script>
-        <script>
-            (function(){var script=document.createElement('script');script.src='//mir.aculo.us/dom-monster/dommonster.js?'+Math.floor((+new Date)/(864e5));document.body.appendChild(script);})()
         </script>
     </body>
 </html>
