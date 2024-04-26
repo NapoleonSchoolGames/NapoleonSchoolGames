@@ -1,4 +1,3 @@
-alert("hi");
 function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
@@ -47,7 +46,7 @@ function searchGames() {
       }
   }
 }
-function generateNews() {
+async function generateNews() {
   const response = await fetch('./json/news.json');
   const newsData = await response.json();
   const newsContainer = document.getElementById('news-container');
@@ -105,10 +104,3 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
-
-Swal.fire({
-  title: 'Test',
-  text: 'Ignore this',
-  icon: 'question',
-  confirmButtonText: 'sure'
-});
