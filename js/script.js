@@ -46,15 +46,10 @@ function searchGames() {
       }
   }
 }
-async function fetchNews() {
-  const response = await fetch('news.json');
+function generateNews() {
+  const response = await fetch('./json/news.json');
   const newsData = await response.json();
-  return newsData;
-}
-async function generateNews() {
-  const newsData = await fetchNews();
   const newsContainer = document.getElementById('news-container');
-  newsContainer.innerHTML = '';
   //for all news "Blocks" call createNewsElement with the title/content, then appends it.
   newsData.forEach(news => {
     const newsElement = createNewsElement(news.title, news.content);
@@ -79,7 +74,7 @@ function createNewsElement(title, content) {
 }
 function loadGames() {
   const gameSelectionDiv = document.getElementById('game-selection');
-  fetch('games.json')
+  fetch('./json/games.json')
     .then(response => response.json())
     .then(games => {
       games.forEach(game => {
@@ -95,7 +90,7 @@ function loadGames() {
 }
 function loadExploits() {
   const gameSelectionDiv = document.getElementById('game-selection');
-  fetch('exploits.json')
+  fetch('./json/exploits.json')
     .then(response => response.json())
     .then(exploits => {
       exploits.forEach(exploit => {
@@ -109,11 +104,6 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
-
-var imported = document.createElement('script');
-imported.src = './jquery-3.7.1.min.js';
-document.head.appendChild(imported);
-$.getScript('https://cdn.jsdelivr.net/npm/sweetalert2@11', function() {});
 
 Swal.fire({
   title: 'Test',
