@@ -104,3 +104,9 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
+
+Swal.fire({
+  title: "Good job!",
+  text: "You clicked the button!",
+  icon: "success"
+});
