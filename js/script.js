@@ -1,3 +1,4 @@
+alert("hi");
 function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
@@ -111,5 +112,3 @@ Swal.fire({
   icon: 'question',
   confirmButtonText: 'sure'
 });
-
-alert("hi");
