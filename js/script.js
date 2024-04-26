@@ -107,12 +107,16 @@ function loadExploits() {
 
 Swal.fire({
   title: "test",
-  text: "this is a test \n <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>link</a>",
+  text: "this is a test, please wait 5 seconds to continue",
   icon: "success",
   timer: 5000,
   timerProgressBar: true.value,
   allowOutsideClick: false,
   allowEscapeKey: false,
   allowEnterKey: false,
-  showConfirmButton: false,
-});
+  showConfirmButton: true
+}).then((result) => {
+  if (result.value) {
+    window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+  }
+}); 
