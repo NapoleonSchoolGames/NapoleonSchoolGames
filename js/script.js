@@ -65,7 +65,7 @@ function createNewsElement(title, content) {
   titleElement.textContent = title;
   //add class
   titleElement.classList.add('news-title');
-  const contentElement = document.createElement('p');
+  const contentElement = document.createElement('span');
   contentElement.textContent = content;
   contentElement.classList.add('news-content');
   element.appendChild(titleElement);
@@ -106,7 +106,13 @@ function loadExploits() {
 }
 
 Swal.fire({
-  title: "Good job!",
-  text: "You clicked the button!",
-  icon: "success"
+  title: "test",
+  text: "this is a test \n <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>link</a>",
+  icon: "success",
+  timer: 5000,
+  timerProgressBar: true.value,
+  allowOutsideClick: false,
+  allowEscapeKey: false,
+  allowEnterKey: false,
+  showConfirmButton: false,
 });
