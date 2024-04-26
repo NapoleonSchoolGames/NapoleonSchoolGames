@@ -92,4 +92,20 @@ function loadGames() {
       });
     })
     .catch(error => alert('Error fetching games:', error));
-};
+}
+function loadExploits() {
+  const gameSelectionDiv = document.getElementById('game-selection');
+  fetch('exploits.json')
+    .then(response => response.json())
+    .then(exploits => {
+      exploits.forEach(exploit => {
+        const img = document.createElement('img');
+        img.className = 'game-button';
+        img.src = `./images/${exploit.name}.jpg`;
+        img.alt = `${exploit.name}`;
+        img.onclick = () => openPage(`./exploits/${exploit.name}/index.html`);
+        gameSelectionDiv.appendChild(img);
+      });
+    })
+    .catch(error => alert('Error fetching exploits:', error));
+}
