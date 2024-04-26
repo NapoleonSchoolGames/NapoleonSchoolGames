@@ -3,22 +3,6 @@ function openPage(url) {
   const iframe = document.getElementById('iframe');
   const buttons = document.getElementById('game-selection')
   //Hide buttons on call
-  Swal.fire({
-    title: "Please consider donating to help me develop the site",
-    text: "If you don't want to, thats cool! Just wait 5 seconds for this to go away.",
-    icon: "question",
-    confirmButtonText: "No donate link yet!",
-    timer: 5000,
-    timerProgressBar: true,
-    allowOutsideClick: false,
-    allowEscapeKey: false,
-    allowEnterKey: false,
-    showConfirmButton: true
-  }).then((result) => {
-    if (result.value) {
-      window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
-    }
-  }); 
   buttons.style.display = 'none';
   const currentSrc = new URL(iframe.src, window.location).href;
   const targetSrc = new URL(url, window.location).href;
