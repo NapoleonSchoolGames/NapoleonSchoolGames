@@ -110,4 +110,6 @@ Swal.fire({
   text: 'Ignore this',
   icon: 'question',
   confirmButtonText: 'sure'
-})
+});
+
+alert("hi");
