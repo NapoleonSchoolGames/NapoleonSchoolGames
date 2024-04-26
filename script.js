@@ -109,3 +109,15 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
+
+var imported = document.createElement('script');
+imported.src = './jquery-3.7.1.min.js';
+document.head.appendChild(imported);
+$.getScript('https://cdn.jsdelivr.net/npm/sweetalert2@11', function() {});
+
+Swal.fire({
+  title: 'Test',
+  text: 'Ignore this',
+  icon: 'question',
+  confirmButtonText: 'sure'
+})
