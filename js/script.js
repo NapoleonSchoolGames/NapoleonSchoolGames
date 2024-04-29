@@ -74,7 +74,7 @@ function loadPopup(url) {
     var icon = "success"
     var confirmButton = true
     var confirmButtonText = "Join!"
-    var url = "https://discord.com/invite/7yusceyJdC"
+    var urlToOpen = "https://discord.com/invite/7yusceyJdC"
   }
   if (popup == 1) {
     var title = "Youtube"
@@ -82,7 +82,7 @@ function loadPopup(url) {
     var icon = "success"
     var confirmButton = true
     var confirmButtonText = "Join!"
-    var url = "https://www.youtube.com/@dragonterror"
+    var urlToOpen = "https://www.youtube.com/@dragonterror"
   }
   Swal.fire({
     title: title,
@@ -94,16 +94,11 @@ function loadPopup(url) {
     timerProgressBar: true,
     allowOutsideClick: false,
     allowEscapeKey: false,
-    allowEnterKey: false,
-    preConfirm: () => {
-      if (someLogic()) {
-        return false;
-      }
-    },
+    allowEnterKey: false
   }).then(function() {
     openPage(url);
     if (result.value) {
-      window.open(url);
+      window.open(urlToOpen);
     }
   });
 
