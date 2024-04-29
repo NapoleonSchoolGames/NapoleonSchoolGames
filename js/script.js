@@ -93,11 +93,10 @@ function loadPopup(url) {
         return false;
       }
     },
-  }).then((result) => {
+  }).then(function() {
     if (result.value) {
       window.open(url);
     }
-  }).then(function() {
     openPage(url);
   });
 
