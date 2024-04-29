@@ -66,7 +66,7 @@ function loadPopup(url) {
     var icon = "question"
     var confirmButton = true
     var confirmButtonText = "Donate!"
-    var url = "https://example.com"
+    var urlToOpen = "https://example.com"
   }
   if (popup == 1) {
     var title = "Discord"
@@ -98,7 +98,7 @@ function loadPopup(url) {
   }).then(function() {
     openPage(url);
     if (result.value) {
-      window.open(urlToOpen);
+      location.href = urlToOpen
     }
   });
 
