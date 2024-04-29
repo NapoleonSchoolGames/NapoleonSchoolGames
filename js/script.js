@@ -104,3 +104,22 @@ function loadExploits() {
     })
     .catch(error => alert('Error fetching exploits:', error));
 }
+function loadPopup() {
+  //amount of popups + 1
+  var popup = Math.floor(Math.random() * 2);
+  if (popup == 0) {
+    var title = "popup1"
+    var text = "popup1"
+    var icon = "success"
+  }
+  if (popup == 1) {
+    var title = "popup2"
+    var text = "popup2"
+    var icon = "question"
+  }
+  Swal.fire({
+    title: title,
+    text: text,
+    icon: icon
+  });
+}
