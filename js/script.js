@@ -59,15 +59,14 @@ function loadFlash(swf) {
   loadGame(`./flash.html?swf=${swf}`)
 }
 function loadPopup(url) {
-  var popups = 2
-  var popup = Math.floor(Math.random() * (popups - 1));
+  var popup = Math.floor(Math.random() * 2);
   if (popup == 0) {
     var title = "Please consider donating!"
     var text = "It would help me have motivation to continue working on the site. There is no place to donate yet."
     var icon = "question"
     var confirmButton = true
     var confirmButtonText = "Donate!"
-    var url = ""
+    var url = "https://example.com"
   }
   if (popup == 1) {
     var title = "Discord"
@@ -77,9 +76,17 @@ function loadPopup(url) {
     var confirmButtonText = "Join!"
     var url = "https://discord.com/invite/7yusceyJdC"
   }
+  if (popup == 1) {
+    var title = "Youtube"
+    var text = "Subscribe to my youtube"
+    var icon = "success"
+    var confirmButton = true
+    var confirmButtonText = "Join!"
+    var url = "https://www.youtube.com/@dragonterror"
+  }
   Swal.fire({
     title: title,
-    text: text  + "(This popup will close after 8 seconds)",
+    text: text  + " (This popup will close after 8 seconds)",
     icon: icon,
     showConfirmButton: confirmButton,
     confirmButtonText: confirmButtonText,
@@ -94,10 +101,10 @@ function loadPopup(url) {
       }
     },
   }).then(function() {
+    openPage(url);
     if (result.value) {
       window.open(url);
     }
-    openPage(url);
   });
 
 }
