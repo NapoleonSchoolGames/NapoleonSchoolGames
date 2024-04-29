@@ -9,27 +9,11 @@ function loadGames() {
         img.className = 'game-button';
         img.src = `./images/${game.name}.jpg`;
         img.alt = `${game.name}`;
-        img.onclick = game.flash ? () => openSWF(`${game.name}.swf`) : () => openPage(`./games/${game.name}/index.html`);
+        img.onclick = game.flash ? () => loadFLash(`${game.name}.swf`) : () => loadGame(`./games/${game.name}/index.html`);
         gameSelectionDiv.appendChild(img);
       });
     })
     .catch(error => alert('Error fetching games:', error));
-}
-function loadExploits() {
-  const gameSelectionDiv = document.getElementById('game-selection');
-  fetch('./json/exploits.json')
-    .then(response => response.json())
-    .then(exploits => {
-      exploits.forEach(exploit => {
-        const img = document.createElement('img');
-        img.className = 'game-button';
-        img.src = `./images/${exploit.name}.jpg`;
-        img.alt = `${exploit.name}`;
-        img.onclick = () => openPage(`./exploits/${exploit.name}/index.html`);
-        gameSelectionDiv.appendChild(img);
-      });
-    })
-    .catch(error => alert('Error fetching exploits:', error));
 }
 
 //news functions
