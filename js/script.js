@@ -62,25 +62,45 @@ function loadPopup(url) {
   var popups = 2
   var popup = Math.floor(Math.random() * (popups - 1));
   if (popup == 0) {
-    var title = "popup1"
-    var text = "popup1"
-    var icon = "success"
+    var title = "Please consider donating!"
+    var text = "It would help me have motivation to continue working on the site. There is no place to donate yet."
+    var icon = "question"
+    var confirmButton = true
+    var confirmButtonText = "Donate!"
+    var url = ""
   }
   if (popup == 1) {
-    var title = "popup2"
-    var text = "popup2"
-    var icon = "question"
+    var title = "Discord"
+    var text = "Join the discord to send game suggestions, donate, get notifications, and get links if the site is blocked!"
+    var icon = "success"
+    var confirmButton = true
+    var confirmButtonText = "Join!"
+    var url = "https://discord.com/invite/7yusceyJdC"
   }
   Swal.fire({
     title: title,
-    text: text,
+    text: text  + "(This popup will close after 8 seconds)",
     icon: icon,
-    showConfirmButton: false,
-    timer: 3000,
+    showConfirmButton: confirmButton,
+    confirmButtonText: confirmButtonText,
+    timer: 8000,
     timerProgressBar: true,
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: false,
+    preConfirm: () => {
+      if (someLogic()) {
+        return false;
+      }
+    },
+  }).then((result) => {
+    if (result.value) {
+      window.open(url);
+    }
   }).then(function() {
     openPage(url);
   });
+
 }
 function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
