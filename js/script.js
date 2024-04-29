@@ -9,7 +9,13 @@ function loadGames() {
         img.className = 'game-button';
         img.src = `./images/${game.name}.jpg`;
         img.alt = `${game.name}`;
-        img.onclick = game.flash ? () => loadFLash(`${game.name}.swf`) : () => loadGame(`./games/${game.name}/index.html`);
+        img.addEventListener('click', function() {
+          if (game.flash) {
+            loadFlash(`${game.name}.swf`);
+          } else {
+            loadGame(`./games/${game.name}/index.html`);
+          }
+        });
         gameSelectionDiv.appendChild(img);
       });
     })
@@ -121,4 +127,10 @@ function fullscreenchanged(event) {
   } else {
     buttons.style.display = 'block';
   }
+}
+
+
+window.onerror = function(message, source, lineno, colno, error) {
+  alert("Error: " + message + "\nLine: " + lineno + "\nColumn: " + colno + "\nSource: " + source);
+  return true;
 }
