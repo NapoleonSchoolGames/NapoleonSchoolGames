@@ -106,15 +106,17 @@ function loadPopup(url) {
 function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
-  const buttons = document.getElementById('game-selection')
-  //Hide buttons on call
-  buttons.style.display = 'none';
   const currentSrc = new URL(iframe.src, window.location).href;
   const targetSrc = new URL(url, window.location).href;
   //Set iframe
   if (currentSrc !== targetSrc) {
     iframe.src = url;
   }
+}
+function fullscreen() {
+  const buttons = document.getElementById('game-selection')
+  //Hide buttons on call
+  buttons.style.display = 'none';
   //fullscreen
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
