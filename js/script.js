@@ -84,9 +84,6 @@ function loadPopup(url) {
     var confirmButtonText = "Subscribe!"
     var urlToOpen = "https://www.youtube.com/@dragonterror"
   }
-  $('.swal2-confirm').click(function(){
-    window.location.href = urlToOpen;
-  });
   Swal.fire({
     title: title,
     text: text  + " (This popup will close after 8 seconds)",
@@ -98,10 +95,13 @@ function loadPopup(url) {
     allowOutsideClick: false,
     allowEscapeKey: false,
     allowEnterKey: false
-  }).then(function() {
-    openPage(url);
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = urlToOpen;
+    } else {
+      openPage(url);
+    }
   });
-
 }
 function openPage(url) {
   const iframeContainer = document.getElementById('iframe-container');
