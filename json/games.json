@@ -4,7 +4,15 @@
       "flash": false
     },
     {
+      "name": "snowrider",
+      "flash": false
+    },
+    {
       "name": "timeshooter3",
+      "flash": false
+    },
+    {
+      "name": "timeshooter2",
       "flash": false
     },
     {
@@ -102,9 +110,5 @@
     {
       "name": "ducklife",
       "flash": true
-    },
-    {
-      "name": "snowrider",
-      "flash": false
     }
 ]
