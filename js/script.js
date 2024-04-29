@@ -81,9 +81,12 @@ function loadPopup(url) {
     var text = "Subscribe to my youtube"
     var icon = "success"
     var confirmButton = true
-    var confirmButtonText = "Join!"
+    var confirmButtonText = "Subscribe!"
     var urlToOpen = "https://www.youtube.com/@dragonterror"
   }
+  $('.swal2-confirm').click(function(){
+    window.location.href = urlToOpen;
+  });
   Swal.fire({
     title: title,
     text: text  + " (This popup will close after 8 seconds)",
@@ -97,9 +100,6 @@ function loadPopup(url) {
     allowEnterKey: false
   }).then(function() {
     openPage(url);
-    if (result.value) {
-      location.href = urlToOpen
-    }
   });
 
 }
