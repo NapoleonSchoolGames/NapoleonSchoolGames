@@ -18,6 +18,7 @@ function openPage(url) {
   } else if (iframe.msRequestFullscreen) { 
     iframe.msRequestFullscreen();
   }
+  loadPopup()
 }
 function openSWF(swf) {
   openPage(`./flash.html?swf=${swf}`);
