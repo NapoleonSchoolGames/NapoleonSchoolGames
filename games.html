@@ -7,9 +7,12 @@
     </head>
     <body>
         <div id="game-selection" class="game-selection">
-            <input type="text" id="search-bar" onkeyup="searchGames()" placeholder="Search for games..">
+            <div id="toolbar">
+                <input type="text" id="search-bar" onkeyup="searchGames()" placeholder="Search for games..">
+                <button onclick="fullscreen();">Fullscreen</button>
+            </div>
         </div>
-        <div id="iframe-container" onclick="fullscreen();">
+        <div id="iframe-container">
             <iframe id="iframe" src="./gamewillappearhere.html"></iframe>
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
