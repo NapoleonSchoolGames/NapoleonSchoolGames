@@ -78,7 +78,8 @@ function loadPopup(url) {
     showConfirmButton: false,
     timer: 3000,
     timerProgressBar: true,
-    didDestroy: openPage(url)
+  }).then(function() {
+    openPage(url);
   });
 }
 function openPage(url) {
