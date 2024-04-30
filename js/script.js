@@ -12,6 +12,8 @@ function loadGames() {
         img.addEventListener('click', function() {
           if (game.flash) {
             loadFlash(`${game.name}.swf`);
+          } else if (game.externalUrl) {
+            loadGame(`${game.url}`)
           } else {
             loadGame(`./games/${game.name}/index.html`);
           }

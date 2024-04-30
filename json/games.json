@@ -1,114 +1,176 @@
 [
     {
+      "name": "diep",
+      "flash": false,
+      "externalURL": true,
+      "url": "https://diep.dragonterror.net"
+    },
+    {
       "name": "halflife",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "snowrider",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "timeshooter3",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "timeshooter2",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "adarkroom",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "cartandpole",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "subway",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "basketball",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "fnaf",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "sandboxels",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "tomb",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "retrobowl",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "tag",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "slope",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "badpiggies",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "supersmashflash",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "doodlejump",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "henrystickminbreakingthebank",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "henrystickminescapingtheprison",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "henrystickminfleeingthecomplex",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "henrystickmininfiltratingtheairship",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "henrystickminstealingthediamond",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "henrystickmincrossingthepit",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "theimpossiblequiz",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "slowroads",
-      "flash": false
+      "flash": false,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "portal",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "achievementunlocked",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     },
     {
       "name": "ducklife",
-      "flash": true
+      "flash": true,
+      "externalURL": false,
+      "url": ""
     }
 ]
