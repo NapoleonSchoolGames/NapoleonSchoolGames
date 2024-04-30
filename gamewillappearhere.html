@@ -1,17 +1,29 @@
 <html>
     <head>
-        <title>If you're seeing this, GO FUCK YOURSELF</title>
+        <title>My Drive - Google Drive</title>
+        <link rel="icon" type="image/x-icon" href="https://drive.google.com/favicon.ico">
         <link rel="stylesheet" href="style.css">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
     </head>
     <body>
-        <h1 class="title" class="middle">No game selected!</h1>
-        <h1 class="title">Click on the fullscreen button once selecting your game!</h1>
-        <h1 class = "title">Press |CTRL + SHIFT + R| if something isn't working, that updates the site!</h1>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <h1 class="title">Napoleon School Games</h1>
+        <div>
+            <h2>Press "CTRL + SHIFT + R" regularly to check for updates!</h2>
+        </div>
+        <div class="links">
+            <p><a href="https://discord.com/invite/7yusceyJdC">Discord</a>(INVITE LINK FIXED)</p>
+            <p><a href="https://youtube.com/@dragonterror">Youtube</a></p>
+            <p><a href="https://dragonterror.org">My personal site</a></p>
+        </div>
+        <br>
+        <div id="news-container"></div>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="js/script.js"></script>
+        <script>
+            addEventListener("DOMContentLoaded", (event) => {generateNews();});
+        </script>
     </body>
 </html>

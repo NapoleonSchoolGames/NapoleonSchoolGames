@@ -8,21 +8,21 @@
         <meta http-equiv="Expires" content="0">
     </head>
     <body>
-        <h1 class="title">Napoleon School Games</h1>
-        <div class="links">
-            <p><a href="./games.html">Games</a></p>
-            <p><a href="https://discord.com/invite/7yusceyJdC">Discord</a>(INVITE LINK FIXED)</p>
-            <p><a href="https://youtube.com/@dragonterror">Youtube</a></p>
-            <p><a href="https://dragonterror.org">My personal site</a></p>
+        <div id="game-selection" class="game-selection">
+            <div id="toolbar">
+                <input type="text" id="search-bar" onkeyup="searchGames()" placeholder="Search for games..">
+                <button onclick="fullscreen();">Fullscreen</button>
+            </div>
         </div>
-        <br>
-        <div id="news-container"></div>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div id="iframe-container">
+            <iframe id="iframe" src="./gamewillappearhere.html"></iframe>
+        </div>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/script.js"></script>
         <script>
-
-            addEventListener("DOMContentLoaded", (event) => {generateNews();});
+            addEventListener("DOMContentLoaded", (event) => {loadGames();});
+            document.addEventListener("fullscreenchange", fullscreenchanged);
         </script>
     </body>
 </html>
