@@ -1,6 +1,11 @@
+/*generic styles*/
 body {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: green;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
 .title {
     font-size: 300%;
@@ -14,8 +19,13 @@ body {
     margin-right: auto;
     text-align: center;
 }
+.linkButton {
+    background-color: green;
+}
+
+/*news*/
 .news {
-    border-color: white;
+    border-color: green;
     border-width: 5px;
     text-align: center;
     border-style: solid;
@@ -30,6 +40,8 @@ body {
 .news-content {
 
 }
+
+/*game selecting*/
 .game-selection {
     left: 0;
     top: 0;
@@ -43,6 +55,9 @@ body {
 .game-button {
     width: 100%
 }
+
+
+/*iframe shit*/
 #iframe-container {
     position: fixed;
     margin: none;
@@ -59,16 +74,14 @@ body {
     height: 100%;
     border: none;
   }
-.center {
-    margin-left: auto;
-    margin-right: auto;
-}
 #iframe-container::backdrop {
     background-color: rgba(255,255,255,0);
 }
 #iframe::backdrop {
     background-color: rgba(255,255,255,0);
 }
+
+/*toolbar*/
 #toolbar {
     position: sticky;
     top: 0;
@@ -78,7 +91,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 #toolbar button, #search-bar {
     height: 100%;
     flex: 1;
