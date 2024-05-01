@@ -48,9 +48,8 @@ body {
     position: fixed;
     overflow-y: scroll;
     width: 25%;
-    border: none;
     height: 100%;
-    margin: none;
+    margin: 0;
     border-right: 5px solid #106404;
 }
 .game-button {
