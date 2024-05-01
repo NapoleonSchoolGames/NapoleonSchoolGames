@@ -1,7 +1,7 @@
 /*generic styles*/
 body {
-    background-color: lightslategray;
-    color: green;
+    background-color: white;
+    color: #106404;
 }
 .center {
     margin-left: auto;
@@ -25,7 +25,7 @@ body {
 
 /*news*/
 .news {
-    border-color: green;
+    border-color: #106404;
     border-width: 5px;
     text-align: center;
     border-style: solid;
