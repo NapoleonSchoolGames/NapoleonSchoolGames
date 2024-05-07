@@ -48,15 +48,14 @@ function chooseName() {
   head.appendChild(linkElement);
 }
 function refHandler() {
-  var url_string = window.location.href
-  var url = new URL(url_string)
-  var ref = url.searchParams.get("ref")
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const ref = urlParams.get('ref')
   if (ref===badSite) {
     Swal.fire({
       title: "Your welcome!",
       text: "You were on a clone of our website! Do not use these. We have brought you back here!",
       icon: warning,
-
     })
   }
   
