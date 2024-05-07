@@ -23,6 +23,30 @@ function loadGames() {
     })
     .catch(error => alert('Error fetching games:', error));
 }
+function chooseName() {
+  const rand = Math.floor(Math.random() * 3);
+  const title
+  const image
+  if (rand === 0) {
+    title = "My Drive - Google Drive"
+    image = "https://drive.google.com/favicon.ico"
+  } else if (rand === 1) {
+    title = "Home"
+    image = "https://ssl.gstatic.com/classroom/favicon.png"
+  } else if (rand === 2) {
+    title = "Untitled document - Google Docs"
+    image = "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico"
+  }
+  const head = document.getElementsByTagName('head')
+  let titleElement = document.createElement("title");
+  titleElement.append(title);
+  head.append(titleElement)
+  let imageElement = document.createElement("link");
+  imageElement.rel = "icon"
+  imageElement.type = "image/x-icon"
+  imageElement.href = image
+  head.append(imageElement)
+}
 
 //news functions
 async function generateNews() {
@@ -155,8 +179,8 @@ function fullscreenchanged(event) {
   }
 }
 
-
 window.onerror = function(message, source, lineno, colno, error) {
   alert("Error: " + message + "\nLine: " + lineno + "\nColumn: " + colno + "\nSource: " + source);
   return true;
 }
+chooseName()
