@@ -25,27 +25,27 @@ function loadGames() {
 }
 function chooseName() {
   const rand = Math.floor(Math.random() * 3);
-  const title
-  const image
+  let title;
+  let image;
   if (rand === 0) {
-    title = "My Drive - Google Drive"
-    image = "https://drive.google.com/favicon.ico"
+    title = "My Drive - Google Drive";
+    image = "https://drive.google.com/favicon.ico";
   } else if (rand === 1) {
-    title = "Home"
-    image = "https://ssl.gstatic.com/classroom/favicon.png"
+    title = "Home - Google Classroom";
+    image = "https://ssl.gstatic.com/classroom/favicon.png";
   } else if (rand === 2) {
-    title = "Untitled document - Google Docs"
-    image = "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico"
+    title = "Untitled document - Google Docs";
+    image = "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico";
   }
-  const head = document.getElementsByTagName('head')
-  let titleElement = document.createElement("title");
-  titleElement.append(title);
-  head.append(titleElement)
-  let imageElement = document.createElement("link");
-  imageElement.rel = "icon"
-  imageElement.type = "image/x-icon"
-  imageElement.href = image
-  head.append(imageElement)
+  const head = document.getElementsByTagName('head')[0];
+  const titleElement = document.createElement("title");
+  titleElement.textContent = title;
+  head.appendChild(titleElement);
+  const linkElement = document.createElement("link");
+  linkElement.rel = "icon";
+  linkElement.type = "image/x-icon";
+  linkElement.href = image;
+  head.appendChild(linkElement);
 }
 
 //news functions
