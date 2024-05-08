@@ -23,20 +23,11 @@ function loadGames() {
     })
     .catch(error => alert('Error fetching games:', error));
 }
-function chooseName() {
-  const rand = Math.floor(Math.random() * 3);
-  let title;
-  let image;
-  if (rand === 0) {
-    title = "My Drive - Google Drive";
-    image = "https://drive.google.com/favicon.ico";
-  } else if (rand === 1) {
-    title = "Home - Google Classroom";
-    image = "https://ssl.gstatic.com/classroom/favicon.png";
-  } else if (rand === 2) {
-    title = "Untitled document - Google Docs";
-    image = "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico";
-  }
+async function chooseName() {
+  const response = await fetch('./json/disguises.json');
+  const data = await response.json();
+  const rand = Math.floor(Math.random() * data.length);
+  const { title, image } = data[rand];
   const head = document.getElementsByTagName('head')[0];
   const titleElement = document.createElement("title");
   titleElement.textContent = title;
