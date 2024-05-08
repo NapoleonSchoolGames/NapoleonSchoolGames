@@ -29,8 +29,8 @@ async function chooseName() {
   const rand = Math.floor(Math.random() * data.length);
   const { title, image } = data[rand];
   const head = document.getElementsByTagName('head')[0];
-  const rand = Math.floor(Math.random() * 1000);
-  if (rand === 0) {
+  const secretChance = Math.floor(Math.random() * 1000);
+  if (secretChance === 0) {
     title = "Napoleon Feet Leaks"
     image = "./images/favicon/feet.png"
   }
