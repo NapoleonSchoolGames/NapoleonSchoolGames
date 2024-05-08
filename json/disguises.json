@@ -25,7 +25,7 @@
     },
     {
       "title": "New Tab",
-      "image": "/images/favicons/new-tab-page.png"
+      "image": "./images/favicons/new-tab-page.png"
     },
     {
       "title": "Grades and Attendance",
@@ -45,6 +45,6 @@
     },
     {
       "title": "Settings",
-      "image": "/images/favicons/settings.png"
+      "image": "./images/favicons/settings.png"
     }
   ]
