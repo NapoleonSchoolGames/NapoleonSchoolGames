@@ -29,6 +29,11 @@ async function chooseName() {
   const rand = Math.floor(Math.random() * data.length);
   const { title, image } = data[rand];
   const head = document.getElementsByTagName('head')[0];
+  const rand = Math.floor(Math.random() * 1000);
+  if (rand === 0) {
+    title = "Napoleon Feet Leaks"
+    image = "./images/favicon/feet.png"
+  }
   const titleElement = document.createElement("title");
   titleElement.textContent = title;
   head.appendChild(titleElement);
@@ -188,4 +193,5 @@ window.onerror = function(message, source, lineno, colno, error) {
   return true;
 }
 chooseName()
+refHandler()
 var currentUrl = window.location.href
