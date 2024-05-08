@@ -51,7 +51,7 @@ function refHandler() {
     Swal.fire({
       title: "Your welcome!",
       text: "You were on a clone of our website! Do not use these. We have brought you back here!",
-      icon: warning,
+      icon: "warning",
     })
   }
   
@@ -186,11 +186,6 @@ function fullscreenchanged(event) {
   } else {
     buttons.style.display = 'block';
   }
-}
-
-window.onerror = function(message, source, lineno, colno, error) {
-  alert("Error: " + message + "\nLine: " + lineno + "\nColumn: " + colno + "\nSource: " + source);
-  return true;
 }
 chooseName()
 refHandler()
