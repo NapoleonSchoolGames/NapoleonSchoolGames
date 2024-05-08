@@ -47,7 +47,7 @@ function refHandler() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const ref = urlParams.get('ref')
-  if (ref===badSite) {
+  if (ref==="badSite") {
     Swal.fire({
       title: "Your welcome!",
       text: "You were on a clone of our website! Do not use these. We have brought you back here!",
