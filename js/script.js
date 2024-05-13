@@ -189,9 +189,4 @@ function fullscreenchanged(event) {
 }
 chooseName()
 refHandler()
-var currentUrl = window.location.href
-
-
-if (!currentURL.includes('https://napoleonschoolgames.github.io/NapoleonSchoolGames/')) {
-  window.top.location.href = 'https://napoleonschoolgames.github.io/NapoleonSchoolGames/?ref=badSite';
-}
+var currentURL = window.location.href
