@@ -57,10 +57,6 @@ function refHandler() {
   }
   
 }
-function replaceText() {
-  document.body.innerHTML = document.body.innerHTML.replace('fuck', '*florp*');
-  document.body.innerHTML = document.body.innerHTML.replace('hell', '*heck*');
-}
 
 //news functions
 async function generateNews() {
@@ -195,7 +191,6 @@ function fullscreenchanged(event) {
 chooseName()
 refHandler()
 var currentURL = window.location.href
-replaceText()
 
 
 if(!window.location.href.includes("https://napoleonschoolgames.github.io/NapoleonSchoolGames/")){if (window.self !== window.top) {document.body.innerHTML = `<html><head><link rel="stylesheet" href="style.css"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"></head><body><button style="width: 100%; height: 100%;" onclick="window.top.location.href = 'https://napoleonschoolgames.github.io/NapoleonSchoolGames/?ref=badSite';"">PLAY</button></body></html>`;} else {window.location.replace("http://napoleonschoolgames.github.io/NapoleonSchoolGames/?ref=badSite");}}
