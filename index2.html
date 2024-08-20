@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+    </head>
+    <body>
+        <div id="game-selection" class="game-selection">
+            <div id="toolbar">
+                <input type="text" id="search-bar" onkeyup="searchGames()" placeholder="Search for games..">
+                <button onclick="fullscreen();">Fullscreen</button>
+            </div>
+        </div>
+        <div id="iframe-container">
+            <iframe id="iframe" src="./iframe.html"></iframe>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/script.js"></script>
+        <script src="js/errorcatching.js"></script>
+        <script>
+            addEventListener("DOMContentLoaded", (event) => {loadGames();});
+            document.addEventListener("fullscreenchange", fullscreenchanged);
+        </script>
+    </body>
+</html>
