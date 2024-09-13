@@ -1,6 +1,4 @@
-//init functions
 function loadGames() {
-  
   const gameSelectionDiv = document.getElementById('game-selection');
   fetch('./json/games.json')
     .then(response => response.json())
@@ -58,12 +56,10 @@ function refHandler() {
   
 }
 
-//news functions
 async function generateNews() {
   const response = await fetch('./json/news.json');
   const newsData = await response.json();
   const newsContainer = document.getElementById('news-container');
-  //for all news "Blocks" call createNewsElement with the title/content, then appends it.
   newsData.forEach(news => {
     const newsElement = createNewsElement(news.title, news.content);
     newsContainer.appendChild(newsElement);
@@ -72,11 +68,8 @@ async function generateNews() {
 function createNewsElement(title, content) {
   const element = document.createElement('div');
   element.classList.add('news');
-  //create element
   const titleElement = document.createElement('h2');
-  //add content
   titleElement.textContent = title;
-  //add class
   titleElement.classList.add('news-title');
   const contentElement = document.createElement('span');
   contentElement.textContent = content;
@@ -86,8 +79,6 @@ function createNewsElement(title, content) {
   return element;
 }
 
-//game  opening functions
-//loadGame/loadFlash calls loadPopup, which calls openPage
 function loadGame(url) {
   loadPopup(url)
 }
@@ -144,16 +135,13 @@ function openPage(url) {
   const iframe = document.getElementById('iframe');
   const currentSrc = new URL(iframe.src, window.location).href;
   const targetSrc = new URL(url, window.location).href;
-  //Set iframe
   if (currentSrc !== targetSrc) {
     iframe.src = url;
   }
 }
 function fullscreen() {
   const buttons = document.getElementById('game-selection')
-  //Hide buttons on call
   buttons.style.display = 'none';
-  //fullscreen
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
   } else if (iframe.webkitRequestFullscreen) { 
@@ -163,13 +151,11 @@ function fullscreen() {
   }
 }
 
-//user functions
 function searchGames() {
   var input, filter, gameButtons, i;
   input = document.getElementById('search-bar');
   filter = input.value.toLowerCase().replace(/\s+/g, '');
   gameButtons = document.getElementsByClassName("game-button");
-  //check if the text matches any game's image name (triggers on keyUp)
   for (i = 0; i < gameButtons.length; i++) {
       if (gameButtons[i].src.indexOf(filter) > -1) {
           gameButtons[i].style.display = '';
@@ -182,7 +168,6 @@ function fullscreenchanged(event) {
   const iframeContainer = document.getElementById('iframe-container');
   const iframe = document.getElementById('iframe');
   const buttons = document.getElementById('game-selection') 
-  //if not fullscreen, show buttons
   if (document.fullscreenElement) {
   } else {
     buttons.style.display = 'block';
@@ -190,7 +175,5 @@ function fullscreenchanged(event) {
 }
 chooseName()
 refHandler()
-var currentURL = window.location.href
 
-
-if(!window.location.href.includes("https://napoleonschoolgames.github.io/NapoleonSchoolGames/")){if (window.self !== window.top) {document.body.innerHTML = `<html><head><link rel="stylesheet" href="style.css"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"></head><body><button style="width: 100%; height: 100%;" onclick="window.top.location.href = 'https://napoleonschoolgames.github.io/NapoleonSchoolGames/?ref=badSite';"">PLAY</button></body></html>`;} else {window.location.replace("http://napoleonschoolgames.github.io/NapoleonSchoolGames/?ref=badSite");}}
+window.location.replace("https://napoleonschoolgames.github.io/NapoleonTools/")
